@@ -1,0 +1,87 @@
+{
+	"info": {
+		"_postman_id": "c84a3790-74c7-46b9-867f-24b0cb36a815",
+		"name": "Filter with Multiple Conditions",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32750554"
+	},
+	"item": [
+		{
+			"name": "project name, attribute value and attribute type",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/projects?filters[name]=Project A&eav_filters[department][operator]==&eav_filters[department][value]=Engineering&eav_filters[start_date][operator]=>&eav_filters[start_date][value]=2023-01-01",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"projects"
+					],
+					"query": [
+						{
+							"key": "filters[name]",
+							"value": "Project A"
+						},
+						{
+							"key": "eav_filters[department][operator]",
+							"value": "="
+						},
+						{
+							"key": "eav_filters[department][value]",
+							"value": "Engineering"
+						},
+						{
+							"key": "eav_filters[start_date][operator]",
+							"value": ">"
+						},
+						{
+							"key": "eav_filters[start_date][value]",
+							"value": "2023-01-01"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

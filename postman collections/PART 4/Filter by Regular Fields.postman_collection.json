@@ -1,0 +1,75 @@
+{
+	"info": {
+		"_postman_id": "32f4381a-179e-4b0b-a915-9edc7d87cc13",
+		"name": "Filter by Regular Fields",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32750554"
+	},
+	"item": [
+		{
+			"name": "project name and status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/projects?filters[name]=Project Alpha&filters[status]=active",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"projects"
+					],
+					"query": [
+						{
+							"key": "filters[name]",
+							"value": "Project Alpha"
+						},
+						{
+							"key": "filters[status]",
+							"value": "active"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

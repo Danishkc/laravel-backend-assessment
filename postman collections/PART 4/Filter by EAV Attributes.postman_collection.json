@@ -1,0 +1,75 @@
+{
+	"info": {
+		"_postman_id": "680d4e84-b615-4852-93a0-267eccfa075e",
+		"name": "Filter by EAV Attributes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32750554"
+	},
+	"item": [
+		{
+			"name": "attribute name and attribute value",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/projects?eav_filters[department][operator]==&eav_filters[department][value]=Engineering",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"projects"
+					],
+					"query": [
+						{
+							"key": "eav_filters[department][operator]",
+							"value": "="
+						},
+						{
+							"key": "eav_filters[department][value]",
+							"value": "Engineering"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
